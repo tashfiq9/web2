@@ -20,7 +20,7 @@ import './CSS/LoginSignup.css'
 
        let responseData;
     
-    await fetch('http://localhost:4000/login', {
+    await fetch('${process.env.REACT_APP_API_URL}/login', {
       method:'POST',
       headers:{
         'Accept': 'application/json',
@@ -42,7 +42,7 @@ import './CSS/LoginSignup.css'
     console.log("Sign Up function executed", formData);
     let responseData;
     
-    await fetch('http://localhost:4000/signup', {
+    await fetch('${process.env.REACT_APP_API_URL}/signup', {
       method:'POST',
       headers:{
         'Accept': 'application/json',
