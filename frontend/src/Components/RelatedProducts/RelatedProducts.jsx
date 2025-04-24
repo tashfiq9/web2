@@ -9,7 +9,7 @@ import Item from '../Items/Item'
     
   useEffect(() => {
     if (category) {
-      fetch(`http://localhost:4000/relatedProducts?category=${category}`)
+      fetch(`${process.env.REACT_APP_API_URL}/relatedProducts?category=${category}`)
         .then((response) => response.json())
         .then((data) => setRelatedProducts(data));
     }
